@@ -4,8 +4,6 @@ import java.util.Observer;
 
 public class Client implements Observer{
     private String nombre;
-    private String titulo;
-    private String enlace;
 
     String[] data = new String[3];
 
@@ -27,12 +25,10 @@ public class Client implements Observer{
     }
 
     public String registerTitle(String title){
-        this.titulo = title;
-        return titulo;
+        return title;
     }
 
     public String registerEnlace(String enlace){
-        this.enlace = enlace;
         return enlace;
     }
 
@@ -40,14 +36,12 @@ public class Client implements Observer{
 
 
 class DGA extends Client{
-
     DGA(String name) {
         super(name);
     }
 }
 
 class CounterDocentes extends Client{
-
     CounterDocentes(String name) {
         super(name);
     }
